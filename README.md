@@ -1,5 +1,8 @@
 # Manga Scrapper
 
+### Setup
+`pip install -r requirements.txt`
+
 ### Sites Available
 <ul>
     <li><a href="https://komiku.id">Komiku</a></li>
