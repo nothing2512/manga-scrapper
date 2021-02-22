@@ -9,9 +9,11 @@ class Connection(object):
             host=HOST,
             user=USER,
             passwd=PASS,
-            database=DB,
             auth_plugin=PLUGIN
         )
+        self.fetch("DROP DATABASE IF EXISTS %s" % DB)
+        self.fetch("CREATE DATABASE %s" % DB)
+        self.__db.database = DB
 
     def fetch(self, query):
         cursor = self.__db.cursor()
