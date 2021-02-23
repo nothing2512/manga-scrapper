@@ -89,7 +89,7 @@ class Downloader(Connection):
             for status in self.status:
                 query = "SELECT * FROM `queued` WHERE `status` = 0 AND `mangaId` IN " \
                         "(SELECT `mangaId` FROM `data` WHERE `status` = %d) ORDER BY `queuedId` ASC"
-                data.append(self.fetchall(query % status))
+                data += self.fetchall(query % status)
         size = len(data)
         i = 1
         for x in data:
