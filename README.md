@@ -1,5 +1,7 @@
 # Manga Scrapper
 
+## Deprecated move to <a href="https://github.com/nothing2512/manga">here</a>
+
 ### Setup
 `pip install -r requirements.txt`
 
